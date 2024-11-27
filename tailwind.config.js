@@ -24,12 +24,12 @@ module.exports = {
       }
     },
     fontFamily: ["Work Sans", "sans-serif"],
-    fontWeight: {
-      "DEFAULT": "400",
-      "bold": "600",
-      "extrabold": "700"
+    // fontWeight: {
+    //   "DEFAULT": 400,
+    //   "bold": 600,
+    //   "extrabold": 700
 
-    }
+    // }
   },
   plugins: [],
 }
