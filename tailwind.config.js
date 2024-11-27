@@ -6,6 +6,10 @@ module.exports = {
       screens: {
         sm: "375px",
         xl: "1440px"
+      },
+      backgroundImage:{
+        "hero-mobile": "url('../assets/images/background-pattern-mobile.svg')",
+        "hero-desktop": "url('../assets/images/background-pattern-desktop.svg')"
       }
     },
     container: {

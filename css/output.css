@@ -626,12 +626,28 @@ video {
   }
 }
 
+.collapse {
+  visibility: collapse;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
+.contents {
+  display: contents;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .items-center {
@@ -640,4 +656,53 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: hsl(275 100% 97% / var(--tw-bg-opacity, 1));
+}
+
+.bg-hero-desktop {
+  background-image: url('../assets/images/background-pattern-desktop.svg');
+}
+
+.bg-hero-mobile {
+  background-image: url('../assets/images/background-pattern-mobile.svg');
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 375px) {
+  .sm\:bg-hero-mobile {
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:bg-hero-desktop {
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-hero-mobile {
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+  }
+}
+
+@media (min-width: 1440px) {
+  .xl\:bg-hero-desktop {
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+  }
 }
