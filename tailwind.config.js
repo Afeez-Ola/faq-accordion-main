@@ -7,10 +7,10 @@ module.exports = {
         sm: "375px",
         xl: "1440px"
       },
-      backgroundImage:{
+      backgroundImage: {
         "hero-mobile": "url('../assets/images/background-pattern-mobile.svg')",
         "hero-desktop": "url('../assets/images/background-pattern-desktop.svg')"
-      }
+      },
     },
     container: {
       center: true,
@@ -24,12 +24,7 @@ module.exports = {
       }
     },
     fontFamily: ["Work Sans", "sans-serif"],
-    // fontWeight: {
-    //   "DEFAULT": 400,
-    //   "bold": 600,
-    //   "extrabold": 700
 
-    // }
   },
   plugins: [],
 }
