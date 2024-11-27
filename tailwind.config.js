@@ -21,7 +21,7 @@ module.exports = {
     },
     fontFamily: ["Work Sans", "sans-serif"],
     fontWeight: {
-      DEFAULT: "400",
+      "DEFAULT": "400",
       "bold": "600",
       "extrabold": "700"
 
