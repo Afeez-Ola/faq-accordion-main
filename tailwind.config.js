@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./index.html", "./assets", "./css"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: "375px",
+        xl: "1440px"
+      }
+    },
     container: {
       center: true,
     },
