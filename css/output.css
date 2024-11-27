@@ -687,6 +687,10 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 28rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
