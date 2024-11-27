@@ -1,5 +1,5 @@
 const expandButtons = document.querySelectorAll(".expand_btn")
-const closeButtons = document.querySelectorAll(".open_btn")
+const closeButtons = document.querySelector(".close_btn")
 const answers = document.querySelectorAll(".answer")
 
 expandButtons.forEach((expandButton) => {
@@ -9,13 +9,11 @@ expandButtons.forEach((expandButton) => {
     console.log(expandImagePath);
   })
 });
-closeButtons.forEach((closeButton) => {
-  closeButton.addEventListener("click", () => {
-    let imageElement = closeButton.querySelector("img")
-    let closeImagePath = (imageElement.getAttribute("src"));
-    console.log(closeImagePath);
-  })
-});
+closeButtons.addEventListener("click", () => {
+  let imageElement = closeButtons.querySelector("img")
+  let closeImagePath = (imageElement.getAttribute("src"));
+  console.log(closeImagePath);
+})
 
 // function changeButton(e){
 //   expandButtons.forEach((expandButton) => {
