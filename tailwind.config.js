@@ -23,7 +23,13 @@ module.exports = {
         dark: "hsl(292, 42%, 14%)",
       }
     },
-    fontFamily: ["Work Sans", "sans-serif"],
+    fontFamily:{
+      work: ["Work Sans", "sans-serif"],
+    },fontWeight: {
+      bold: 600,
+      extrabold: 700,
+      default: 400
+    }
 
   },
   plugins: [],
