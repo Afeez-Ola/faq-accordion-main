@@ -17,7 +17,10 @@ module.exports = {
     },
     colors: {
       white: "hsl(0, 0%, 100%)",
-      pink: "hsl(275, 100%, 97%)",
+      pink:{
+        light: "hsl(275, 100%, 97%)",
+        default: "#AD28EB"
+      } ,
       purple: {
         light: "hsl(292, 16%, 49%)",
         dark: "hsl(292, 42%, 14%)",
