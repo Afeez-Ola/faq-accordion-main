@@ -21,6 +21,7 @@ module.exports = {
       purple: {
         light: "hsl(292, 16%, 49%)",
         dark: "hsl(292, 42%, 14%)",
+        pale: "#8B6990"
       }
     },
     fontFamily:{
