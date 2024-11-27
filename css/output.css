@@ -945,6 +945,10 @@ h1, h2, h3, h4, h5, h6 {
   outline-style: solid;
 }
 
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 375px) {
   .sm\:bg-hero-mobile {
     background-image: url('../assets/images/background-pattern-mobile.svg');
