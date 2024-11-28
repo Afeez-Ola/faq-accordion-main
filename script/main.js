@@ -6,36 +6,49 @@ const questionListBody = document.getElementById("question_body");
 
 questionListBody.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e.target);
+  // console.log(e.target);
 
-  if (e.target.classList.contains("faq_question") || e.target.classList.contains("button")) {
-    const expandButton = e.target.nextElementSibling?.classList.contains("expand_btn") ?
-      e.target.nextElementSibling :
-      null;
-    const closeButton = e.target.nextElementSibling?.classList.contains("close_btn") ?
-      e.target.nextElementSibling :
-      null;
+  const targetElement = e.target.closest(".faq_question, .button");
 
-    if (expandButton || expandButton.querySelector("img")) {
-      let answer = expandButton.parentElement.nextElementSibling
-      let expandImageSrc = expandButton.querySelector("img").attributes.src
-      let expandElementClassLists = expandButton.classList
+  if (targetElement) {
+    const expandButton = targetElement.nextElementSibling?.classList.contains("expand_btn") 
+        ? targetElement.nextElementSibling 
+        : null;
+    const closeButton = targetElement.nextElementSibling?.classList.contains("close_btn") 
+        ? targetElement.nextElementSibling 
+        : null;
+    const button = targetElement?.classList.contains("button") 
+        ? targetElement 
+        : null;
+
+        console.log(button);
+
+    if (expandButton || button) {
+      const answer = expandButton.parentElement.nextElementSibling;
+      const expandImage = expandButton.querySelector("img");
+      console.log(answer);
+
+      const expandImageSrc = expandImage.attributes.src;
+      const expandElementClassLists = expandButton.classList;
       console.log(expandElementClassLists);
-      expandElementClassLists.remove("expand_btn")
-      expandElementClassLists.add("close_btn")
-      answer.classList.remove("hidden")
+
+      expandElementClassLists.remove("expand_btn");
+      expandElementClassLists.add("close_btn");
+      answer.classList.remove("hidden");
       expandImageSrc.value = "assets/images/icon-minus.svg";
     }
-    if (closeButton || closeButton.querySelector("img")) {
-      let answer = closeButton.parentElement.nextElementSibling
-      let expandImageSrc = closeButton.querySelector("img").attributes.src
-      let expandElementClassLists = closeButton.classList
+
+    if (closeButton || button) {
+      const answer = closeButton.parentElement.nextElementSibling;
+
+      const expandImageSrc = closeButton.querySelector("img").attributes.src;
+      const expandElementClassLists = closeButton.classList;
       console.log(expandElementClassLists);
-      expandElementClassLists.remove("close_btn")
-      expandElementClassLists.add("expand_btn")
-      answer.classList.add("hidden")
+
+      expandElementClassLists.remove("close_btn");
+      expandElementClassLists.add("expand_btn");
+      answer.classList.add("hidden");
       expandImageSrc.value = "assets/images/icon-plus.svg";
     }
-
   }
-})
+});
