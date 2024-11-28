@@ -1,9 +1,20 @@
-const expandButtons = document.querySelectorAll(".expand_btn")
-const closeButtons = document.querySelectorAll(".close_btn")
-const answers = document.querySelectorAll(".answer")
+const expandButtons = document.querySelectorAll(".expand_btn");
+const closeButtons = document.querySelectorAll(".close_btn");
+const answers = document.querySelectorAll(".answer");
+const questionListBody = document.getElementById("question_body");
+
+questionListBody.addEventListener("click", (e) => {
+if(e.srcElement.classList.contains("expand_btn")){
+  console.log("This is the expand button")
+} 
+if(e.srcElement.classList.contains("close_btn")){
+  console.log("This is the close button");
+}
+})
 
 expandButtons.forEach((expandButton) => {
   expandButton.addEventListener("click", (e) => {
+    e.preventDefault()
     let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
     let expandImageSrc = (e.srcElement.attributes.src);
     let expandElementClassLists = (e.srcElement.parentElement.classList);
@@ -16,6 +27,7 @@ expandButtons.forEach((expandButton) => {
 })
 closeButtons.forEach((closeButton) => {
   closeButton.addEventListener("click", (e) => {
+    e.preventDefault()
     let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
     let expandImageSrc = (e.srcElement.attributes.src);
     let expandElementClassLists = (e.srcElement.parentElement.classList);
@@ -26,38 +38,3 @@ closeButtons.forEach((closeButton) => {
     console.log(expandElementClassLists);
   })
 })
-// closeButtons.forEach((expandButton) => {
-//   expandButton.addEventListener("click", (e) => {
-//     let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
-//     let expandImageSrc = (e.srcElement.attributes.src);
-//     answer.classList.remove("hidden")
-//     expandImageSrc.value = "assets/images/icon-minus.svg";
-//   })
-  
-// });
-// closeButtons.addEventListener("click", () => {
-//   const closeImageElement = closeButtons.querySelector("img")
-//   const closeImagePath = (closeImageElement.getAttribute("src"));
-//   console.log(closeImagePath);
-// })
-
-closeButtons.forEach((closeButton) => {
-  closeButton.querySelector("img").addEventListener("click", getButtonSrc)
-});
-// answers.forEach((answer) => {
-//   answer.addEventListener("click", getAnswer)
-// });
-
-function getButtonSrc(e){
-  e.preventDefault()
-  // console.log(getAnswer(e));
-  
-  return e.srcElement.getAttribute("src")
-}
-
-// function getAnswer(e){
-//   e.preventDefault()
-//   answers.forEach((answer) => {
-//     console.log(answer.classList.remove("hidden"));
-//   });
-// }
