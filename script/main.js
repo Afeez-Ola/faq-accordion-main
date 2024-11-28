@@ -1,24 +1,37 @@
 const expandButtons = document.querySelectorAll(".expand_btn")
-const closeButtons = document.querySelector(".close_btn")
+const closeButtons = document.querySelectorAll(".close_btn")
 const answers = document.querySelectorAll(".answer")
 
 expandButtons.forEach((expandButton) => {
   expandButton.addEventListener("click", () => {
-    let imageElement = expandButton.querySelector("img")
-    let expandImagePath = (imageElement.getAttribute("src"));
+    const expandImageElement = expandButton.querySelector("img")
+    const expandImagePath = (expandImageElement.getAttribute("src"));
     console.log(expandImagePath);
   })
 });
-closeButtons.addEventListener("click", () => {
-  let imageElement = closeButtons.querySelector("img")
-  let closeImagePath = (imageElement.getAttribute("src"));
-  console.log(closeImagePath);
-})
+// closeButtons.addEventListener("click", () => {
+//   const closeImageElement = closeButtons.querySelector("img")
+//   const closeImagePath = (closeImageElement.getAttribute("src"));
+//   console.log(closeImagePath);
+// })
 
-// function changeButton(e){
-//   expandButtons.forEach((expandButton) => {
-//     if (expandButton.attributes.item){
+closeButtons.forEach((closeButton) => {
+  closeButton.querySelector("img").addEventListener("click", getButtonSrc)
+});
+answers.forEach((answer) => {
+  answer.addEventListener("click", getAnswer)
+});
 
-//     }
-//   });
-// }
+function getButtonSrc(e){
+  e.preventDefault()
+  // console.log(getAnswer(e));
+  
+  return e.srcElement.getAttribute("src")
+}
+
+function getAnswer(e){
+  e.preventDefault()
+  answers.forEach((answer) => {
+    console.log(answer);
+  });
+}
