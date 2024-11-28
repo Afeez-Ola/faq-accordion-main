@@ -3,11 +3,10 @@ const closeButtons = document.querySelectorAll(".close_btn")
 const answers = document.querySelectorAll(".answer")
 
 expandButtons.forEach((expandButton) => {
-  expandButton.addEventListener("click", () => {
-    const expandImageElement = expandButton.querySelector("img")
-    const expandImagePath = (expandImageElement.getAttribute("src"));
-    console.log(expandImagePath);
+  expandButton.addEventListener("click", (e) => {
+
   })
+  
 });
 // closeButtons.addEventListener("click", () => {
 //   const closeImageElement = closeButtons.querySelector("img")
@@ -18,9 +17,9 @@ expandButtons.forEach((expandButton) => {
 closeButtons.forEach((closeButton) => {
   closeButton.querySelector("img").addEventListener("click", getButtonSrc)
 });
-answers.forEach((answer) => {
-  answer.addEventListener("click", getAnswer)
-});
+// answers.forEach((answer) => {
+//   answer.addEventListener("click", getAnswer)
+// });
 
 function getButtonSrc(e){
   e.preventDefault()
@@ -29,9 +28,9 @@ function getButtonSrc(e){
   return e.srcElement.getAttribute("src")
 }
 
-function getAnswer(e){
-  e.preventDefault()
-  answers.forEach((answer) => {
-    console.log(answer);
-  });
-}
+// function getAnswer(e){
+//   e.preventDefault()
+//   answers.forEach((answer) => {
+//     console.log(answer.classList.remove("hidden"));
+//   });
+// }
