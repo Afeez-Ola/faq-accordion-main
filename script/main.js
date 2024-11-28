@@ -6,9 +6,24 @@ expandButtons.forEach((expandButton) => {
   expandButton.addEventListener("click", (e) => {
     let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
     let expandImageSrc = (e.srcElement.attributes.src);
-    console.log(e.srcElement.attributes);
+    let expandElementClassLists = (e.srcElement.parentElement.classList);
+    expandElementClassLists.remove("expand_btn")
+    expandElementClassLists.add("close_btn")
     answer.classList.remove("hidden")
     expandImageSrc.value = "assets/images/icon-minus.svg";
+    console.log(expandElementClassLists);
+  })
+})
+closeButtons.forEach((closeButton) => {
+  closeButton.addEventListener("click", (e) => {
+    let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
+    let expandImageSrc = (e.srcElement.attributes.src);
+    let expandElementClassLists = (e.srcElement.parentElement.classList);
+    expandElementClassLists.remove("close_btn")
+    expandElementClassLists.add("expand_btn")
+    answer.classList.add("hidden")
+    expandImageSrc.value = "assets/images/icon-plus.svg";
+    console.log(expandElementClassLists);
   })
 })
 // closeButtons.forEach((expandButton) => {
