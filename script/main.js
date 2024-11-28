@@ -4,10 +4,22 @@ const answers = document.querySelectorAll(".answer")
 
 expandButtons.forEach((expandButton) => {
   expandButton.addEventListener("click", (e) => {
-
+    let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
+    let expandImageSrc = (e.srcElement.attributes.src);
+    console.log(e.srcElement.attributes);
+    answer.classList.remove("hidden")
+    expandImageSrc.value = "assets/images/icon-minus.svg";
   })
+})
+// closeButtons.forEach((expandButton) => {
+//   expandButton.addEventListener("click", (e) => {
+//     let answer = (e.srcElement.parentElement.parentElement.parentElement.querySelector(".answer"));
+//     let expandImageSrc = (e.srcElement.attributes.src);
+//     answer.classList.remove("hidden")
+//     expandImageSrc.value = "assets/images/icon-minus.svg";
+//   })
   
-});
+// });
 // closeButtons.addEventListener("click", () => {
 //   const closeImageElement = closeButtons.querySelector("img")
 //   const closeImagePath = (closeImageElement.getAttribute("src"));
